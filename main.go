@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"github.com/AI1411/go-ecom/routes"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	fmt.Println("Hello World!")
+	r := gin.Default()
+	routes.Router(r)
+
+	r.Run()
 }
